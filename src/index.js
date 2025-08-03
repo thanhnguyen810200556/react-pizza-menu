@@ -58,7 +58,6 @@ function App() {
 }
 
 function Header() {
-  //   const style = { color: "red", fontSize: "48px", textTransform: "uppercase" };
   const style = {};
   return (
     <header className="header">
@@ -69,7 +68,6 @@ function Header() {
 
 function Menu() {
   const pizzas = pizzaData;
-  //   const pizzas = [];
   const numPizzas = pizzas.length;
   return (
     <main className="menu">
@@ -84,7 +82,7 @@ function Menu() {
 
           <ul className="pizzas">
             {pizzas.map((pizza) => (
-              <Pizza pizzaObj={pizza} ket={pizza.name} /> //props có tên là pizzaObj
+              <Pizza pizzaObj={pizza} ket={pizza.name} /> 
             ))}
           </ul>
         </React.Fragment>
@@ -104,13 +102,6 @@ function Pizza({ pizzaObj }) {
       <div>
         <h3>{pizzaObj.name}</h3>
         <p>{pizzaObj.ingredients}</p>
-
-        {/* {pizzaData.soldOut ? (
-          <span> SOLD OUT</span>
-        ) : (
-          <span>pizzaObj.price</span>
-        )} */}
-
         <span>{pizzaObj.soldOut ? "SOLD OUT" : pizzaObj.price}</span>
       </div>
     </li>
@@ -149,12 +140,10 @@ function Order({ closeHour, openHour }) {
   );
 }
 
-//Function chứa dữ liệu Pizza
-
-//React v18
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />{" "}
   </React.StrictMode>
 );
+
