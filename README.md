@@ -22,7 +22,7 @@ A simple React app to display a pizza menu. This is the first project in [The Ul
 
 ## 🔧 Tech Stack
 
-- React (Vite)
+- React (create-react-app)
 - CSS
 
 ---
